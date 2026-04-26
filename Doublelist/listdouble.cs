@@ -209,17 +209,17 @@ public class listdouble<T> where T : IComparable<T>
         {
             if (current.Data!.Equals(data))
             {
-                if (current == _head) // Found at the head
+                if (current == _head) 
                 {
                     _head = _head.Next;
                     _head!.Previous = null;
                 }
-                else if (current == _tail) // Found at the tail
+                else if (current == _tail) 
                 {
                     _tail = _tail.Previous;
                     _tail!.Next = null;
                 }
-                else // Found in the middle
+                else 
                 {
                     current.Previous!.Next = current.Next;
                     current.Next!.Previous = current.Previous;
@@ -242,19 +242,19 @@ public class listdouble<T> where T : IComparable<T>
             var next = current.Next;
             if (current.Data!.Equals(data))
             {
-                if (current == _head) // Found at the head
+                if (current == _head) 
                 {
                     _head = _head.Next;
                     if (_head != null)
                         _head.Previous = null;
                 }
-                else if (current == _tail) // Found at the tail
+                else if (current == _tail)
                 {
                     _tail = _tail.Previous;
                     if (_tail != null)
                         _tail.Next = null;
                 }
-                else // Found in the middle
+                else 
                 {
                     current.Previous!.Next = current.Next;
                     current.Next!.Previous = current.Previous;

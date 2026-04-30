@@ -11,7 +11,7 @@ public class listdouble<T> where T : IComparable<T>
         _tail = null;
     }
 
-    public void InsertOrdered(T data)
+    public void ADD(T data)
     {
         var newNode = new Node<T>(data);
         if (_head == null)
@@ -76,7 +76,7 @@ public class listdouble<T> where T : IComparable<T>
     }
 
 
-    public void Reverse()
+    public void Order()
     {
         var current = _head;
         while (current != null)
